@@ -1,0 +1,19 @@
+  <div class="imgcontainer">
+    <h1>План</h1>
+
+  </div>
+
+  <div class="container">
+    <div  class="login_container">
+      <label for="username"><b>Имя пользователя</b></label>
+      <input type="text" placeholder="Введите логин" id="username" [(ngModel)]="username" required>
+
+      <label for="password"><b>Пароль</b></label>
+      <input type="password" placeholder="Введите пароль" id="password" [(ngModel)]="password" required>
+
+      <button type="submit" (click)=handleLogin() >Вход</button>
+      <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+    </div>
+
+  </div>
+
